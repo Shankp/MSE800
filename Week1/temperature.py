@@ -1,39 +1,21 @@
 import numpy as np
-#Temperature data (in °C): [18.5, 19, 20, 25.0, 2, 30, 13.9]
 
-def _averageGenerator_(tempList):
-    average = np.average(tempList)
-    return average
-
-def _getMax_(tempList):
-    max = np.max(tempList)
-    return max
-
-def _getMin_(tempList):
-    min = np.min(tempList)
-    return min
-
-def _temperatureCast_(tempList):
+def _ConvertTemperature_(tempList):
     convertedArray = []
     for temp in tempList:
         convertedArray.append( temp * 9/5 + 32)
-    print("Converted array",convertedArray)
+    return convertedArray
     
 
 if __name__ =="__main__":
-    tempArray = [18.5, 19, 20, 25.0, 2, 30, 13.9]
-    average =_averageGenerator_(tempArray)
-    print(f"average of the temperature {average: .2f}")
-    maxArray =_getMax_(tempArray)
-    print(f"max of the temperature {maxArray: .2f}")
-    minArray =_getMin_(tempArray)
-    print(f"min of the temperature {minArray: .2f}")
-    _temperatureCast_(tempArray)
+    tempArray = [18.5, 19, 20, 25.0, 2, 30, 13.9]    
+    print(f"average of the temperature,{np.average(tempArray): .2f}")
+    print(f"max of the temperature,{np.max(tempArray): .2f}")   
+    print(f"min of the temperature {np.min(tempArray): .2f}")
+    print(f"converted temperature: {_ConvertTemperature_(tempArray)}")
 
-    #arrange array
     arr = np.array(tempArray)
-
-    # Find values greater than 10
-    result = np.where(arr > 20)
-    print("temperates above 20",result[0])
+    result = np.where(np.array(tempArray) > 20)
+    print("Indices of temperature values above 20: ",result[0])
+    print(f"values of temperature values above 20: {arr[result]}")
                       
