@@ -10,6 +10,8 @@ def calculate_rainfall_statistics(array):
     print(f"Number of days with zero rainfall : {rainfallFiltered[0]}")
     percentile = np.percentile(array,75)
     print(f"75th percentile of rainfall : {percentile: .2f}")
+    valuesAbovePercentile =array[array > percentile]
+    print(f"rainfall values above 75th percentile : {valuesAbovePercentile}")
 
 if __name__ == "__main__":
     array = np.array([0.0, 5.2, 3.1, 0.0, 12.4, 0.0, 7.5])
