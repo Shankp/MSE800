@@ -15,13 +15,13 @@ def GenerateBlanksInRandomWord(randomWord):
 
 def CheckUserInput(randowmword, randomWordWithBlank, userInputLetter):
     numberOfTries = 5
-    while numberOfTries > 0:       
+    while numberOfTries > 0:  
+          
         blankIndex = randomWordWithBlank.find("_")   
         alist = list(randomWordWithBlank)
         alist[blankIndex] = userInputLetter
         randomWordWithBlank =   ''.join(alist)
         numberOfTries -= 1
-
 
         if randowmword == randomWordWithBlank:
             print("Congratulations! You guessed the word correctly.")
@@ -30,8 +30,8 @@ def CheckUserInput(randowmword, randomWordWithBlank, userInputLetter):
             print("Sorry, that's not correct. Try again!")
             numberOfTries -= 1
             userInputLetter = input("Enter your guess: ")
-    
-    if(numberOfTries == 0):
+   
+    if(numberOfTries == -1):
         print("Game over! You've used all your tries.")
         return False
 
