@@ -20,15 +20,19 @@ def CheckUserInput(randowmword, randomWordWithBlank, userInputLetter):
         alist = list(randomWordWithBlank)
         alist[blankIndex] = userInputLetter
         randomWordWithBlank =   ''.join(alist)
-        numberOfTries -= 1
 
         if randowmword == randomWordWithBlank:
             print("Congratulations! You guessed the word correctly.")
-            return
+            break
         else:           
             print("Sorry, that's not correct. Try again!")
             numberOfTries -= 1
-            userInputLetter = input("Enter another guess: ")
+            if(numberOfTries == 0):
+                print("You have no more tries left.")
+                return False
+            else:
+                print(f"You have {numberOfTries} tries left.")
+                userInputLetter = input("Enter another guess: ")
    
     if(numberOfTries == -1):
         print("Game over! You've used all your tries.")
