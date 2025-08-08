@@ -2,8 +2,9 @@ import random
 
 def GenerateRandomWord():
     words = ["test", "example", "python", "code", "random"]
-    print("Generating a random word...")
+    print("Generating a random word...")   
     randomWord = random.choice(words)
+    print("Random word length:", len(randomWord))
     return randomWord
 
 def GenerateBlanksInRandomWord(randomWord):
@@ -14,8 +15,7 @@ def GenerateBlanksInRandomWord(randomWord):
 
 def CheckUserInput(randowmword, randomWordWithBlank, userInputLetter):
     numberOfTries = 5
-    while numberOfTries > 0:  
-          
+    while numberOfTries >= 0:            
         blankIndex = randomWordWithBlank.find("_")   
         alist = list(randomWordWithBlank)
         alist[blankIndex] = userInputLetter
@@ -28,7 +28,7 @@ def CheckUserInput(randowmword, randomWordWithBlank, userInputLetter):
         else:           
             print("Sorry, that's not correct. Try again!")
             numberOfTries -= 1
-            userInputLetter = input("Enter your guess: ")
+            userInputLetter = input("Enter another guess: ")
    
     if(numberOfTries == -1):
         print("Game over! You've used all your tries.")
@@ -37,6 +37,7 @@ def CheckUserInput(randowmword, randomWordWithBlank, userInputLetter):
 
 
 if __name__ == "__main__":
+    print("Welcome to the Word Game!")
     randowmword = GenerateRandomWord()
 
     blanks = GenerateBlanksInRandomWord(randowmword)
