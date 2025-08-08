@@ -10,7 +10,6 @@ def GenerateBlanksInRandomWord(randomWord):
     print("Generating blanks in the random word...")
     randdomNumber = random.randint(0, len(randomWord) - 1)
     blanks = randomWord.replace(randomWord[randdomNumber], "_")
-    print(f"Random word with blanks: {blanks}")
     return blanks
 
 def CheckUserInput(randowmword, randomWordWithBlank, userInputLetter):
@@ -39,7 +38,6 @@ def CheckUserInput(randowmword, randomWordWithBlank, userInputLetter):
 
 if __name__ == "__main__":
     randowmword = GenerateRandomWord()
-    print(f"Random word generated: {randowmword}")  
 
     blanks = GenerateBlanksInRandomWord(randowmword)
     userInput = input("Enter your guess: ")
