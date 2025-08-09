@@ -1,4 +1,6 @@
 class StringManipulator:
+    #Initialization method encapsulate the intial setup of the class
+    #Improve the code readability
     def  __init__(self, text):  
         self.text = text
 
