@@ -1,6 +1,4 @@
 class StringManipulator:
-    pass
-
 
     def find_character(self, word,char):
         return word.find(char)
@@ -20,8 +18,8 @@ class StringManipulator:
 
 if __name__ == "__main__": 
     name  =  StringManipulator()
-
-    print(name.find_character("hello","e"))  # Output: 1
-    print(name.find_string_length("hello"))
-    print(name.capitalize_string("hello"))  # Output: Hello
-    print(name.Uppercase_string("hello"))  # Output: HELLO
+    word = "hello"
+    print(name.find_character(word,"e"))  # Output: 1
+    print(name.find_string_length(word))
+    print(name.capitalize_string(word))  # Output: Hello
+    print(name.Uppercase_string(word))  # Output: HELLO
