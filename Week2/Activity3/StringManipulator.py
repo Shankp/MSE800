@@ -14,6 +14,8 @@ class StringManipulator:
     def Uppercase_string(self):
         return self.text.upper()
     
+   
+    
 
 
 if __name__ == "__main__": 
