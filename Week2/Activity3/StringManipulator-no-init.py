@@ -1,5 +1,8 @@
 class StringManipulator:
 
+    #Initialization (__init__) method encapsulate the intial setup of the class
+    #Improve the code readability
+
     def find_character(self, word,char):
         return word.find(char)
     
