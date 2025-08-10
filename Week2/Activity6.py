@@ -10,15 +10,15 @@ class Person:
         return f"Name: {self.list[0]}, Age: {self.list[1]}, Address: {self.list[2]}"
     
 def main():
-    list = []
+    personal_details = []
     name = input("Enter your name: ")
-    list.append(name)
+    personal_details.append(name)
     age = int(input("Enter your age: "))
-    list.append(age)
+    personal_details.append(age)
     address = input("Enter your address: ")
-    list.append(address)
+    personal_details.append(address)
 
-    personal_details = Person(list)
+    personal_details = Person(personal_details)
     print("\nPersonal Details:")
     print(personal_details.display_details())
 
