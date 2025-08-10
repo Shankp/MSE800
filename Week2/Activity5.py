@@ -6,8 +6,12 @@ class SentenceManipulator:
         return len(self.text.split())
 
 
+def main():
+    input_text = input("Enter a sentence: ")
+    sentence = SentenceManipulator(input_text)    
+    print(f"Number of word count in the sentence: {sentence.find_word_count()}")  
+
 if __name__ == "__main__":
-    sentence = SentenceManipulator("test hello world")
-    
-    print(f"Number of word count in the sentence: {sentence.find_word_count()}")  # Output: 1
+    main()
+   
    
