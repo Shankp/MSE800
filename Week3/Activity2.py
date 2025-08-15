@@ -6,8 +6,9 @@ class FileHandler:
         count = 0
         with open(self.filename, 'r', encoding='utf-8') as file:
             content = file.read()
-            w = content.split()    
+            w = content.strip().split()    
             count += len(w)
+            file.close()
             return count
 
     
@@ -15,7 +16,7 @@ class FileHandler:
 def main():
     file = FileHandler('demo.txt')
     print("Reading file content:")   
-    print("Number of words in the file " + str(file.read()))
+    print("Number of words in the file : " + str(file.read()))
     
 
 if __name__ == "__main__":
