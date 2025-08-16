@@ -1,0 +1,37 @@
+Week 3 - Activity 4: design a database for your college
+ 
+1)Design a database for YB college:
+Project scope (short paragraph)
+2)Write a  story that defines the purpose and scope of the database. Describe the main entities (e.g., students, lecturers, etc).
+Entities and EER diagram
+3)List all entities with brief descriptions of their roles and attributes (e.g., Student, Course, Class, Lecturer, etc).
+Table design
+4)State how many tables are required after mapping the EER to a relational schema.
+ 
+
+ 1)Project scope (short paragraph)
+     For given scenario ,Database is to persist data related to Use cases for students studying the college.So student entrolments to
+     courses and lectures who will be teaching that courses will be the focus of use cases
+
+ 2)Write a  story that defines the purpose and scope of the database. Describe the main entities (e.g., students, lecturers, etc).
+Entities and EER diagram    
+
+     Student is enrolled to many courses and one course will be done by many students
+     Students is taught by many Lectures and Lectures are teaching to many students
+     Lecture is teaching one course and one cource will be taught by one lecturers 
+     Student is assinge to one class and one class will include many students
+
+3)List all entities with brief descriptions of their roles and attributes (e.g., Student, Course, Class, Lecturer, etc).
+Table design
+
+     Student  --> name,age,Address,DOB --> A person who studies at the college
+     Lecturer --> Name, department,    --> A person who teaches at the college
+     Course   --> Name, department     --> A course is an subject that will be enrolled by students
+     Class    --> Name,                --> Class is the specific class location where student will be studying
+
+4)State how many tables are required after mapping the EER to a relational schema.
+    Tables require 
+        Student, Lecture, Course, Class, 
+            StudentEntrolClass, StudentLecure
+
+ 
