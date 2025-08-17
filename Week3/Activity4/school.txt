@@ -31,7 +31,6 @@ Table design
 
 4)State how many tables are required after mapping the EER to a relational schema.
     Tables require 
-        Student, Lecture, Course, Class, 
-            StudentEntrolClass, StudentLecure
+        Student, Lecture, Course, Class, StudentClass, StudentLecure, 
 
  
