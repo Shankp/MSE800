@@ -17,7 +17,7 @@ Table design
 Entities and EER diagram    
 
      Student is enrolled to many courses and one course will be done by many students
-     Students is taught by many Lectures and Lectures are teaching to many students
+     Student is taught by many Lectures and Lectures are teaching to many students
      Lecture is teaching one course and one cource will be taught by one lecturers 
      Student is assinge to one class and one class will include many students
 
