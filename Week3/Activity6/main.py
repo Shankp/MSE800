@@ -1,11 +1,4 @@
-from database import (
-    create_student_table,
-    create_student_class_table,
-    create_lecturer_table,
-    create_course_table,
-    create_student_course_table,
-    create_class_table
-)
+from database import (create_database_tables)
 from services.student_service import StudentService
 from services.course_service import CourseService
 from services.lecturer_service import LecturerService
@@ -50,12 +43,7 @@ def insert_initial_data():
 
 
 def main():
-    create_student_table()
-    create_class_table()
-    create_student_class_table()
-    create_lecturer_table()
-    create_course_table()
-    create_student_course_table()
+    create_database_tables()    
 
     insert_initial_data()
     student_id = 3

@@ -6,7 +6,7 @@ def create_connection():
     return conn
 
 
-def create_student_table():
+def create_database_tables():
     conn = create_connection()
     cursor = conn.cursor()
     cursor.execute(
@@ -18,13 +18,7 @@ def create_student_table():
         )
     """
     )
-    conn.commit()
-    conn.close()
 
-
-def create_class_table():
-    conn = create_connection()
-    cursor = conn.cursor()
     cursor.execute(
         """
         CREATE TABLE IF NOT EXISTS class(
@@ -32,13 +26,7 @@ def create_class_table():
             classname TEXT NOT NULL)
     """
     )
-    conn.commit()
-    conn.close()
 
-
-def create_student_class_table():
-    conn = create_connection()
-    cursor = conn.cursor()
     cursor.execute(
         """
         CREATE TABLE IF NOT EXISTS studentclass (
@@ -50,13 +38,7 @@ def create_student_class_table():
         )
     """
     )
-    conn.commit()
-    conn.close()
 
-
-def create_lecturer_table():
-    conn = create_connection()
-    cursor = conn.cursor()
     cursor.execute(
         """
         CREATE TABLE IF NOT EXISTS lecturer (
@@ -66,13 +48,7 @@ def create_lecturer_table():
         )
     """
     )
-    conn.commit()
-    conn.close()
 
-
-def create_course_table():
-    conn = create_connection()
-    cursor = conn.cursor()
     cursor.execute(
         """
         CREATE TABLE IF NOT EXISTS course (
@@ -84,13 +60,6 @@ def create_course_table():
         )
     """
     )
-    conn.commit()
-    conn.close()
-
-
-def create_student_course_table():
-    conn = create_connection()
-    cursor = conn.cursor()
     cursor.execute(
         """
         CREATE TABLE IF NOT EXISTS studentcourse (
@@ -102,5 +71,6 @@ def create_student_course_table():
         )
     """
     )
+
     conn.commit()
     conn.close()
