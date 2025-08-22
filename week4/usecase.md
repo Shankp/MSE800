@@ -1,20 +1,20 @@
+Project scope (short paragraph)
+     For given scenario ,Database is to persist data related to Use cases for students studying the college.So student entrolments to   courses and lectures who will be teaching that courses will be the focus 
+
+  
 Actors:
 
-1- Student – main user who enrolls in courses and attends classes.
-
-2- Lecturer – teaches courses and manages classes.
-
-3- Administrator –
+1- Student 
+2- Lecturer
+3- Administrator 
 
 Use Cases:
 
 For Student
 
-    Register and update profile.
+    Mange user profile.
 
     Enroll in courses.
-
-    View timetable / class schedule.
 
     Submit assignments.
 
@@ -26,18 +26,14 @@ For Lecturer
 
     Schedule and manage classes.
 
-    Upload teaching materials.
-
     Grade assignments.
 
     Provide feedback to students.
 
-For Administrator (if included)
+For Administrator
 
     Manage student and lecturer records.
 
-    Approve course offerings.
+    manage class allocations
 
-    Allocate classrooms and time slots.
-
-    Generate reports (enrollment, performance, attendance).
+    Generate reports.
