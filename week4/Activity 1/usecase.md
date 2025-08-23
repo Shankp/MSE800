@@ -22,6 +22,8 @@ For Student
 
 For Lecturer
 
+    Mange user profile.
+
     Create and update courses.
 
     Schedule and manage classes.
