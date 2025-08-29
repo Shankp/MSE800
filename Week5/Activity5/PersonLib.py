@@ -3,3 +3,6 @@ class Person:
         self.name = name
         self.address = address
         self.age = age
+
+    def greet(self):
+        print("Greetings1 :", self.name)

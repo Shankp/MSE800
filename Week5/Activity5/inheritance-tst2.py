@@ -6,8 +6,9 @@ class Student(Person):
         #Person.__init__(name, address, age)
         self.student_id = student_id
 
+    #override the greet() method in person class
     def greet(self):
-        print("Greetings :", self.name)
+        print("Greeting2 :", self.name)
 
 def main():
     student = Student("John","test","15",123)
