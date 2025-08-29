@@ -22,6 +22,7 @@ def main():
     student.id=1 #ID is inherited from parent class Person
     student.name='test1' #name is inherited from parent class Person
     student.record ="test" #record is is within the child class
+    print('Student Id :' ,student.id)
 
 if __name__== "__main__":
     main()
