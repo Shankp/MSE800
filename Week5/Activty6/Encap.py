@@ -28,7 +28,7 @@ def main():
     print("grade :", student.get_grade())
 
     try:
-        print("age :", student.__grade)
+        print("age :", student.__grade) # student grade is not accessible as its private. need to access through accessor
     except:
         print("student.__grade is private variable. can access directly")
 
