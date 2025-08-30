@@ -1,7 +1,7 @@
 class Person:
     def __init__(self, name, age):
         self.name = name
-        self._age = age
+        self._age = age #protected property
 
     def get_age(self):
         return self.age
@@ -11,8 +11,8 @@ class Student(Person):
     def __init__(self, name, age):
         super().__init__(name, age)
         self.name = name
-        self._age = age
-        self.__grade = "A"
+        self._age = age #protected property
+        self.__grade = "A" #private property, can only accss throug accessor(method)
 
     def get_grade(self):
         return self.__grade
