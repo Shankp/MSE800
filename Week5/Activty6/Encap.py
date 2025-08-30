@@ -34,11 +34,14 @@ class PriamaryStudent(Student):
 
 
 def main():
+    print("**Student Info") 
     student = Student("John", 25)
     print("name :", student.name)  # student name is accessible as its public
     print("age :", student._age)  # student age is accessible as its protected
     print("grade :", student.get_grade())
 
+
+    print("\n**Primary Student Info")
     LitStudent = PriamaryStudent("Jenny",10, 100)
     print("name :", LitStudent.name)  # PriamaryStudent name is accessible as its public
     print("height :", LitStudent.get_heigh())  # student height can access through accessor
