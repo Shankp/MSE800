@@ -1,3 +1,4 @@
+#LibraryItem is base class of the book items
 class LibraryItem:
     def __init__(self, title, author):
         self.title = title
@@ -6,8 +7,8 @@ class LibraryItem:
     def get_book_details(self):
         return f"title : {self.title}, author : {self.author}"
 
-
-class Book(LibraryItem):
+#Child class that inherits method from Library item parent class
+class Book(LibraryItem):              
     def __init__(self, title, author):
         super().__init__(title, author)
         self.title = title
@@ -16,7 +17,7 @@ class Book(LibraryItem):
     def get_book_details(self):
         return f"title : {self.title}, author : {self.author}"
 
-
+#Child class that inherits method from Library item parent class
 class Magazine(LibraryItem):
     def __init__(self, title, author, issue_frequency):
         super().__init__(title, author)
@@ -33,7 +34,7 @@ class Libray:
         self.booklist = []
         self.magazine_list = []
 
-    def add_book(self, book: Book):
+    def add_book(self, book: Book): 
         self.booklist.append(book)
 
     def add_Magazine(self, magazine: Magazine):
