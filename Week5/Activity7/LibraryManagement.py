@@ -50,7 +50,7 @@ class Libray:
 def main():
     """
     Main function to demonstrate the usage of the Library management system.
-    This function performs the following steps:
+    This function performs the following steps::
     1. Initializes a Library instance.
     2. Creates a Book and a Magazine object with sample data.
     3. Adds the Book and Magazine to the Library.
