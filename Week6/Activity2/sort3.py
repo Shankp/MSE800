@@ -1,3 +1,5 @@
+import operator
+
 # Sort by age, then by salary if ages are the same
 # use lambda
 employees = [
@@ -9,5 +11,10 @@ employees = [
 
 if __name__ == "__main__":
     sorted_employees = sorted(employees, key= lambda x : (x['age'],x['salary']))
+    for emp in sorted_employees:
+        print(emp)
+
+    print("without using lambda")
+    sorted_employees = sorted(employees, key=operator.itemgetter('age', 'salary'))
     for emp in sorted_employees:
         print(emp)
