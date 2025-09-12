@@ -18,16 +18,20 @@ def main():
     order_service.insert_order(102, 2, 'Smartphone')
     user_service.insert_user(3, 'Charlie')
     order_service.insert_order(103, 3, 'Tablet')
+    user_service.insert_user(4, 'Diana')
+    order_service.insert_order(104, 4, 'Monitor')   
+    user_service.insert_user(5, 'Eve')
+    order_service.insert_order(105, 5, 'Keyboard')
     print("Sample data inserted.")
 
     # Fetch and display data
     print("\nFetching data using non-singleton services...")
     user_id = 1
-    start_time = time.time()
+    start_time = time.time_ns()
     user = user_service.get_user(user_id)
     orders = order_service.get_orders(user_id)
-    end_time = time.time()
-    print(f"Data fetched in {end_time - start_time:.4f} seconds")
+    end_time = time.time_ns()
+    print(f"Data fetched in {(end_time - start_time) / 1_000_000} milliseconds")
 
     print("User:", user)
     print("Orders:", orders)
@@ -40,12 +44,12 @@ def main():
     user_service_singleton = UserService_singleton()
     order_service_singleton = OrderService_singleton()
     user_id = 1
-    start_time = time.time()    
+    start_time = time.time_ns()
 
     user = user_service_singleton.get_user(user_id)
     orders = order_service_singleton.get_orders(user_id)
-    end_time = time.time()
-    print(f"Data fetched in {end_time - start_time:.4f} seconds")
+    end_time = time.time_ns()
+    print(f"Data fetched in {(end_time - start_time) / 1_000_000} milliseconds")
 
     print("User:", user)
     print("Orders:", orders)
