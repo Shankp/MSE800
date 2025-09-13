@@ -1,0 +1,38 @@
+# Python cache & build files
+__pycache__/
+*.py[cod]
+*.egg
+*.egg-info/
+*.pyo
+*.pyd
+*.so
+*.cpython-312.pyc
+
+# Build / Distribution folders
+build/
+dist/
+*.spec
+
+# Virtual environment
+venv/
+.env/
+
+# IDE / Editor settings
+.vscode/
+.idea/
+*.swp
+
+# Logs
+*.log
+
+# Database files (optional if you want to ignore SQLite)
+*.db
+
+# Secret / Config files
+app.sec
+*.secret
+*.key
+*.pem
+
+# Alembic cache
+migrations/versions/__pycache__/
