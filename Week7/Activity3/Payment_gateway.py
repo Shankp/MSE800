@@ -12,7 +12,7 @@ class PaymentGateway:
         return cls._instance
 
     # Method to get the payment factory instance
-    def get(self):
+    def get(self, method=None):
         if self.gateway is None:
-            self.gateway = payment_processor.PaymentFactory()
+            self.gateway = payment_processor.PaymentFactory().processor(method)
         return self.gateway

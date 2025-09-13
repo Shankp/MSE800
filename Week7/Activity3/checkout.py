@@ -3,7 +3,7 @@ from Payment_gateway import PaymentGateway
 # Client code
 def checkout(payment_method, amount):
     gateway = PaymentGateway()
-    processor = gateway.get().processor(payment_method)
+    processor = gateway.get(payment_method)
     return processor.process_payment(amount)
 
 
