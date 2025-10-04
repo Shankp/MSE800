@@ -16,6 +16,7 @@ def start_game():
         game_processor.place_player_input(board, current_player)
         if game_processor.check_winner(board, winning_patterns):
             print(f"Player {current_player} wins!")
+            game_display.display_final_board(board)
             break
         current_player = 2 if current_player == 1 else 1
 
