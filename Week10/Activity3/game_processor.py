@@ -2,17 +2,19 @@
 
 
 class GameProcessor:
-
     """Process game logic for Tic Tac Toe"""
+
     def place_player_input(self, board, player):
         """Prompt the player for a move and update the board accordingly."""
         try:
+            print(
+                "Enter select  row (0 or 1 or 2) and col (0 or 1 or 2) for your move."
+            )
+            move = ""
             if player == 1:
-                print("Player 1, Select your move (X):")
+                move = input("Player 1, Select your move (X): ")
             else:
-                print("Player 2, Select your move (O):")
-
-            move = input("Enter your move (row,col): ")
+                move = input("Player 2, Select your move (O): ")
             row, col = map(int, move.split(","))
             if board[row, col] == "*":
                 if player == 1:
