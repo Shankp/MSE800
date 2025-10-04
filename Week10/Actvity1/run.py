@@ -8,7 +8,6 @@ def run_checker(data):
     print(f"Total length: {analyzer.total_length()}")
     print(f"Uppercase count: {analyzer.count_uppercase()}")
 
-
 if __name__ == "__main__":
     print()
     run_checker("Hello World!")
