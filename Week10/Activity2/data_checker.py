@@ -1,4 +1,4 @@
-"""Main script to execute data analysis using the DataAnalyzer class."""
+"""Main script to execute data analysis using the DataChecker class."""
 
 from typing import Union
 
@@ -32,10 +32,13 @@ class DataChecker:
         )
 
     def count_special_characters(self) -> int:
-        """Count special characters in the data."""
+        """Count special characters in the data, excluding spaces."""
         if isinstance(self.data, str):
-            return sum(1 for char in self.data if not char.isalnum())
+            return sum(
+                1 for char in self.data
+                if not char.isalnum() and not char.isspace()
+            )
         return sum(
             1 for item in self.data
-            if isinstance(item, str) and not item.isalnum()
-        )
+            if isinstance(item, str) and not item.isalnum() and not item.isspace()
+        ) 

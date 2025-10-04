@@ -16,8 +16,5 @@ def run_analysis(data):
 
 
 if __name__ == "__main__":
-    print("###First input")
-    run_analysis("Hello World! 123 #$%")
-    print("###Second input")
-    run_analysis(["A", "b", "3", "@", "Z"])
-    
+    user_input1 = input("Please enter a sentence to check:")
+    run_analysis(user_input1)
