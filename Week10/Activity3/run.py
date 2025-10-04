@@ -4,8 +4,8 @@ from game_processor import GameProcessor
 from game_display import GameDisplay
 
 
-if __name__ == "__main__":
-
+def start_game():
+    """Start the Tic Tac Toe game."""
     game_display = GameDisplay()
     game_processor = GameProcessor()
     board = game_display.generate_board()
@@ -18,4 +18,6 @@ if __name__ == "__main__":
             print(f"Player {current_player} wins!")
             break
         current_player = 2 if current_player == 1 else 1
-    game_display.display_final_board(board)
+
+if __name__ == "__main__":
+    start_game()
