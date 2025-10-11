@@ -62,4 +62,4 @@ def factorial(n):
 
 if __name__ == "__main__":
     # run the tests
-    doctest.testmod()
+    doctest.testmod(verbose=True)
