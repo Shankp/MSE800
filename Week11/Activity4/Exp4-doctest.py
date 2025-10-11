@@ -9,6 +9,8 @@ The example module supplies one function, factorial().  For example,
 120
 """
 
+
+# Compute factorial iteratively
 def factorial(n):
     """Return the factorial of n, an exact integer >= 0.
 
@@ -37,14 +39,21 @@ def factorial(n):
     """
 
     import math
+
+    # check that n is a non-negative integer
     if not n >= 0:
         raise ValueError("n must be >= 0")
+
+    # make sure n is an integer
     if math.floor(n) != n:
         raise ValueError("n must be exact integer")
-    if n+1 == n:  # catch a value like 1e300
+
+    if n + 1 == n:  # catch a value like 1e300
         raise OverflowError("n too large")
     result = 1
     factor = 2
+
+    # compute the factorial iteratively
     while factor <= n:
         result *= factor
         factor += 1
@@ -52,5 +61,5 @@ def factorial(n):
 
 
 if __name__ == "__main__":
-
+    # run the tests
     doctest.testmod()
