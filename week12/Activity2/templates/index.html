@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        html {
+            background-color: #f0f8ff;
+            padding: 20px;
+            border-radius: 10px;
+            align-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Load an Image from URL</h1>
+    <form method="POST">
+        <input type="text" name="image_url" placeholder="Enter image URL" required>
+        <button type="submit">Load Image</button>
+    </form>
+
+    {% if image_url %}
+    <h2>Image Preview:</h2>
+    <img src="{{ image_url }}" alt="User Image" style="max-width: 500px;">
+    <p><a href="{{ image_url }}">Open Image in New Tab</a></p>
+    {% endif %}
+</body>
+
+</html>
